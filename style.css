@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
+
+:root{
+    --nav-element1: rgb(94, 227, 136);
+    --nav-element1-dark: rgb(77, 188, 112);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Funnel Display';
+}
+
+html,
+body {
+    height: 100%;
+    min-width: 420px;
+}
+
+button{
+    border: none;
+    background: none;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+}
+
+nav {
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 2.5rem;
+    font-size: 1.325rem;
+}
+
+nav h1 {
+    font-size: 2rem;
+}
+
+nav h1 span {
+    color: var(--nav-element1);
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+ul {
+    list-style: none;
+    
+}
+
+ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #000;
+}
+
+nav ul li a::before{
+    content: '';
+    height: 0.185rem;
+    width: 110%;
+    transform: scaleX(0);
+    translate: -50%;
+    position: absolute;
+    bottom: -0.3125rem;
+    left: 50%;
+    background: var(--nav-element1);
+    transform-origin: left;
+    transition: all .3s;
+}
+
+nav ul li a:hover:before{
+    transform: scaleX(1);
+}
+
+nav ul li button{
+    box-sizing: unset;
+    padding: 0.625rem 2.2rem;
+    border-radius: 0.625rem;
+    background: var(--nav-element1);
+    font-size: 1rem;
+    transition: all .3s;
+}
+
+
+nav ul li button:hover{
+    scale: 1.1;
+    background: var(--nav-element1-dark);
+}
+
+.ham-burger {
+    display: none;
+    position: relative;
+    z-index: 40;
+}
+
+.ham-burger-menu {
+    min-height: 100%;
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: all 0.5s;
+    z-index: 2;
+    transform: translateX(50vw);
+    background: rgb(237, 166, 148);
+    border-radius: 20px 0 0 20px;
+}
+
+.ham-burger-menu ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px 0 0 30px;
+}
+
+.ham-burger-menu ul li {
+    height: 30px;
+    display: grid;
+    align-items: center;
+}
+
+.ham-burger-menu.active a {
+    font-size: 18px;
+    animation: move 0.3s linear forwards;
+    animation-delay: calc(var(--i) * 0.1s);
+}
+
+@keyframes move {
+    from {
+        transform: translateX(100vw);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.ham-burger-menu.active a {
+    font-size: 18px;
+    opacity: 0;
+    animation: move 0.3s ease-in-out forwards;
+    animation-delay: calc(var(--i) * 0.1s);
+}
+
+@keyframes move {
+    from {
+        transform: translateX(100vw);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.ham-burger-menu.active {
+    transform: translateX(0);
+}
+
+section{
+    height: 100vh;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    background: url('./bg1.jpg');
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+.home .content{
+    padding: 0 12.5rem;
+    text-align: left;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.25rem;
+}
+
+.content h1{
+    font-size: 3.5rem;
+}
+
+.content p{
+    margin-top: 1.25rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.content .btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.875rem;
+}
+
+.content .btns button{
+    padding: 1rem 2.5rem;
+    border-radius: 100vw;
+    font-size: 1.25rem;
+    background: #eee;
+    white-space: nowrap;
+}
+
+.home .image{
+    height: 100%;
+    flex: 1 1 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.home .img{
+    height: 70%;
+    width: 65%;
+    border-radius: 7rem 15rem 0 0;
+    background: url('./image1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.features, .achievement{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.features h1{
+    font-size: 3.75rem;
+}
+
+.feature-cards{
+    display: flex;
+    gap: 3.125rem;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    width: 90%;
+}
+
+.feature-card{
+    border-radius: 1.25rem;
+    height: 70%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3.125rem;
+    transition: all .3s;
+    background: #dfd;
+}
+
+
+.feature-card .feature-icon{
+    text-align: center;
+    height: 120px;
+    width: 120px;
+    border-radius: 100vw;
+    background: rgba(38, 223, 109, 0.293);
+    transition: all .3s;
+}
+
+.feature-card:hover{
+    border-top-right-radius: 7rem;
+    outline: 4px solid var(--nav-element1);
+}
+
+.feature-card:hover > .feature-icon{
+    background: rgba(38, 223, 109, 0.66);
+}
+
+.feature-card .feature-discription p{
+    padding: 0 1.25rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+@media only screen and (max-width: 870px) {
+    nav ul li a {
+        display: none;
+    }
+
+    .ham-burger {
+        display: block;
+    }
+}
