@@ -220,6 +220,12 @@ section {
     font-size: 1.25rem;
     background: #eee;
     white-space: nowrap;
+    transition: all .3s;
+}
+
+.content .btns button:hover{
+    scale: 1.2;
+    background: var(--nav-element1);
 }
 
 .home .image {
