@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="banner">
+      <div class="banner-content">
+        <img class="logo-img" src="./images/logo.png" alt="Logo" />
+        <h1>GEORGETTE'S PMHNP CERTIFICATE REVIEW COURSE</h1>
+      </div>
+    </div>
+
+    <div class="qbank-card">
+      <div class="access-label">Access for 3 months</div>
+      <img class="qbank-logo" src="./images/logo.png" alt="PMHNP Q-bank Logo" />
+      <h2 class="qbank-title">Georgette's PMHNP Q-bank</h2>
+      <button class="qbank-button">Learn More</button>
+    </div>
+
+    <div class="courses-container" id="courses-container">
+      <!-- Course cards will be shown here -->
+    </div>
+
+    <template id="course-template">
+      <div class="course-card">
+        <h3 class="course-title"></h3>
+        <p><strong>Price:</strong> <span class="course-price"></span></p>
+        <p><strong>Duration:</strong> <span class="course-duration"></span></p>
+        <p class="short-description"></p>
+
+        <ul class="full-description" style="display: none"></ul>
+
+        <button class="see-more green-button">See More</button>
+        <button class="see-less green-button" style="display: none">
+          See Less
+        </button>
+
+        <a href="#" class="sign-in-button">Sign In</a>
+      </div>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
