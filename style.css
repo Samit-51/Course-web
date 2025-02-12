@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
 
-:root{
+:root {
     --nav-element1: rgb(94, 227, 136);
     --nav-element1-dark: rgb(77, 188, 112);
 }
@@ -18,12 +18,17 @@ body {
     min-width: 420px;
 }
 
-button{
+button {
     border: none;
     background: none;
 }
 
-header{
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+header {
     position: fixed;
     width: 100%;
     top: 0;
@@ -55,16 +60,14 @@ nav ul {
 
 ul {
     list-style: none;
-    
+
 }
 
 ul li a {
     position: relative;
-    text-decoration: none;
-    color: #000;
 }
 
-nav ul li a::before{
+nav ul li a::before {
     content: '';
     height: 0.185rem;
     width: 110%;
@@ -78,11 +81,11 @@ nav ul li a::before{
     transition: all .3s;
 }
 
-nav ul li a:hover:before{
+nav ul li a:hover:before {
     transform: scaleX(1);
 }
 
-nav ul li button{
+nav ul li button {
     box-sizing: unset;
     padding: 0.625rem 2.2rem;
     border-radius: 0.625rem;
@@ -92,7 +95,7 @@ nav ul li button{
 }
 
 
-nav ul li button:hover{
+nav ul li button:hover {
     scale: 1.1;
     background: var(--nav-element1-dark);
 }
@@ -170,11 +173,11 @@ nav ul li button:hover{
     transform: translateX(0);
 }
 
-section{
+section {
     height: 100vh;
 }
 
-.home{
+.home {
     display: flex;
     align-items: center;
     gap: 1.25rem;
@@ -184,7 +187,7 @@ section{
     background-position: center;
 }
 
-.home .content{
+.home .content {
     padding: 0 12.5rem;
     text-align: left;
     flex: 1;
@@ -194,24 +197,24 @@ section{
     gap: 1.25rem;
 }
 
-.content h1{
+.content h1 {
     font-size: 3.5rem;
 }
 
-.content p{
+.content p {
     margin-top: 1.25rem;
     font-size: 1.3rem;
     font-weight: 500;
 }
 
-.content .btns{
+.content .btns {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1.875rem;
 }
 
-.content .btns button{
+.content .btns button {
     padding: 1rem 2.5rem;
     border-radius: 100vw;
     font-size: 1.25rem;
@@ -219,14 +222,14 @@ section{
     white-space: nowrap;
 }
 
-.home .image{
+.home .image {
     height: 100%;
     flex: 1 1 100%;
     display: flex;
     align-items: flex-end;
 }
 
-.home .img{
+.home .img {
     height: 70%;
     width: 65%;
     border-radius: 7rem 15rem 0 0;
@@ -236,18 +239,19 @@ section{
     background-position: center;
 }
 
-.features, .achievement{
+.features,
+.achievement {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.features h1{
+.features h1 {
     font-size: 3.75rem;
 }
 
-.feature-cards{
+.feature-cards {
     display: flex;
     gap: 3.125rem;
     align-items: center;
@@ -256,7 +260,7 @@ section{
     width: 90%;
 }
 
-.feature-card{
+.feature-card {
     border-radius: 1.25rem;
     height: 70%;
     flex: 1;
@@ -270,7 +274,7 @@ section{
 }
 
 
-.feature-card .feature-icon{
+.feature-card .feature-icon {
     text-align: center;
     height: 120px;
     width: 120px;
@@ -279,19 +283,150 @@ section{
     transition: all .3s;
 }
 
-.feature-card:hover{
+.feature-card:hover {
     border-top-right-radius: 7rem;
     outline: 4px solid var(--nav-element1);
 }
 
-.feature-card:hover > .feature-icon{
+.feature-card:hover>.feature-icon {
     background: rgba(38, 223, 109, 0.66);
 }
 
-.feature-card .feature-discription p{
+.feature-card .feature-discription p {
     padding: 0 1.25rem;
     font-size: 1rem;
     text-align: center;
+}
+
+.achievement {
+    height: 50vh;
+}
+
+.achievement-cards {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 0 10rem;
+}
+
+.achievement-card {
+    padding: 1.25rem 1.875rem;
+    height: 10rem;
+    flex: 0 1 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #dfd;
+    border-radius: 1rem;
+    transition: all .3s;
+}
+
+.achievement-card:hover {
+    scale: 1.2;
+}
+
+.achievement-title {
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+}
+
+.course-cards {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 0 10rem;
+}
+
+.course-card {
+    position: relative;
+    flex: 1 1 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    background: #eff;
+    overflow: clip;
+    border-radius: 5%;
+}
+
+.course-card .course-image {
+    width: 100%;
+    height: 60%;
+    background: #242424;
+    color: #fff;
+}
+
+.course-review,
+.course-title,
+.course-detials,
+.more-info {
+    height: 10%;
+    padding: 0 0.625rem;
+}
+
+.course-title {
+    font-size: 2rem;
+    text-align: left;
+    font-weight: 700;
+}
+
+.course-card .price{
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    background: var(--nav-element1);
+    padding: 5px 10px;
+    border-radius: 2px;
+}
+
+.more-course-btn{
+    padding: 3rem 2.5rem;
+    display: flex;
+    width: 100%;
+}
+
+.more-course-btn button{
+    margin-inline-start: auto;
+    padding: 1.25rem 2.5rem;
+    border-radius: 100vw;
+    background: var(--nav-element1);
+    font-size: 1.2rem;
+    color: #efe;
+    transition: all .3s;
+}
+
+.more-course-btn button:hover{
+    background: var(--nav-element1-dark);
+    scale: 1.2;
+}
+
+.extra-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    background: #ddd;
+}
+
+.extra-section .links{
+    font-size: 1.2rem;
+    columns: 2;
+    column-gap: 70px;
+}
+
+
+.contact-links{
+    display: flex;
+    gap: 30px;
+}
+
+.contact-links svg{
+    height: 50px;
 }
 
 @media only screen and (max-width: 870px) {
