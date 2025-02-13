@@ -351,9 +351,14 @@ section {
   height: 400px;
   display: flex;
   flex-direction: column;
-  background: #eff;
+  background: rgb(245, 247, 180);
   overflow: clip;
   border-radius: 5%;
+}
+
+.course-card:hover{
+    scale: 1.0.2;
+    outline: 4px solid var(--nav-element1-dark);
 }
 
 .course-card .course-image {
