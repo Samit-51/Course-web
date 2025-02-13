@@ -1,0 +1,123 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  background-color: white;
+  padding: 60px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Register Button */
+.register-btn {
+  background-color: #16a085;
+  color: white;
+  border: none;
+  padding: 18px 36px;
+  font-size: 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 30px;
+  transition: background 0.3s ease-in-out;
+}
+
+.register-btn:hover {
+  background-color: #138d75;
+}
+
+/* Title */
+h1 {
+  color: #001f4d;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Divider */
+.divider {
+  width: 70%;
+  height: 3px;
+  background-color: #001f4d;
+  border: none;
+  margin: 20px auto;
+}
+
+/* Description */
+.description {
+  color: #001f4d;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* Download Button */
+.download-btn {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  padding: 18px 36px;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.download-btn:hover {
+  background-color: #0b5ed7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 40px;
+  }
+
+  .register-btn,
+  .download-btn {
+    padding: 14px 28px;
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 30px;
+  }
+
+  .register-btn,
+  .download-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+}
