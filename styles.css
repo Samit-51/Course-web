@@ -302,7 +302,8 @@ section {
 }
 
 .achievement {
-  height: 50vh;
+  height: fit-content;
+  min-height: 50vh;
 }
 
 .achievement-cards {
@@ -354,11 +355,12 @@ section {
   background: rgb(245, 247, 180);
   overflow: clip;
   border-radius: 5%;
+  transition: all .3s;
 }
 
 .course-card:hover{
-    scale: 1.0.2;
-    outline: 4px solid var(--nav-element1-dark);
+  transform: translateY(-20px);
+  box-shadow: 0 0 0 4px var(--nav-element1-dark);
 }
 
 .course-card .course-image {
