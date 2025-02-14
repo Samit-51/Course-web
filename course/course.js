@@ -74,7 +74,7 @@ const courses = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "Last Minute Review (LMR)",
     price: "$249.99",
     duration: "6.5 hours",

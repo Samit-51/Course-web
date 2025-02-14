@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Signup</title>
-    <link rel="stylesheet" href="../css/signup.css" />
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css" />
   </head>
   <body>
     <div class="banner">
@@ -16,23 +16,21 @@
 
     <div class="container">
       <div class="form-box">
-        <h1>Signup</h1>
+        <h1>Login</h1>
         <form>
-          <div class="input-box">
-            <input type="text" placeholder="Username" required />
-          </div>
           <div class="input-box">
             <input type="email" placeholder="Email" required />
           </div>
           <div class="input-box">
-            <input type="password" placeholder="Create password" required />
-          </div>
-          <div class="input-box">
-            <input type="password" placeholder="Confirm password" required />
+            <input type="password" placeholder="Password" required />
             <span class="eye-icon">👁️</span>
           </div>
-          <button type="submit" class="btn">Signup</button>
-          <p>Already have an account? <a href="../HTML/login.html">Login</a></p>
+          <a href="#" class="forgot-password">Forgot password?</a>
+          <button type="submit" class="btn">Login</button>
+          <p>
+            Don't have an account?
+            <a href="signup.html">Create a new account</a>
+          </p>
           <div class="separator">Or</div>
           <button class="social-btn facebook">Login with Facebook</button>
           <button class="social-btn google">Login with Google</button>

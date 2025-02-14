@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course List</title>
+    <link rel="stylesheet" href="course.css" />
+  </head>
+  <body>
+    <!-- Home Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <h1>Master Nursing Fundamentals</h1>
+        <p>Learn essential nursing skills with expert guidance.</p>
+        <a href="#overview" class="sign-in-button">Learn More</a>
+        <a href="#offer" class="sign-in-button">Enroll Now</a>
+      </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="content">
+      <div class="container">
+        <h2>Course Overview</h2>
+        <p>
+          This course is designed to help you master the fundamentals of nursing
+          with expert guidance. Whether you're a beginner or looking to refresh
+          your skills, this course has something for everyone.
+        </p>
+
+        <div class="overview-details">
+          <div class="overview-text">
+            <h3>Why Choose This Course?</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <div class="overview-image">
+            <img src="./image.webp" alt="Nursing Course Image" />
+          </div>
+        </div>
+
+        <div class="key-points">
+          <h3>Key Highlights</h3>
+          <ul>
+            <li>Comprehensive curriculum covering all nursing fundamentals.</li>
+            <li>Hands-on practice with real-world scenarios.</li>
+            <li>Access to expert instructors and mentors.</li>
+            <li>Flexible learning schedule to suit your needs.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Offer Section -->
+    <section id="offer" class="content">
+      <div class="offer-container">
+        <h2>What We Offer</h2>
+        <div class="offer-list">
+          <div class="offer-item">
+            <h3>3-Month Access</h3>
+            <p>Flexible learning at your own pace.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
+              nulla minus deserunt, optio aperiam corporis aut nesciunt
+              doloremque magni voluptatem molestias? Sed eveniet id autem fuga!
+              Aperiam laboriosam quasi fugiat.
+            </p>
+          </div>
+          <div class="offer-item">
+            <h3>PMHNP Q-bank</h3>
+            <p>Comprehensive question bank to test your knowledge.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+              sint eius laudantium eum hic voluptas repellat architecto
+              doloribus rerum velit. Fuga voluptatibus quasi voluptate
+              temporibus, porro quibusdam obcaecati deserunt ut.
+            </p>
+          </div>
+          <div class="offer-item">
+            <h3>Expert Instructors</h3>
+            <p>Learn from experienced professionals in the field.</p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde et
+              eligendi enim ab, iusto sequi accusamus? Ea eos tempora est
+              asperiores ut blanditiis tempore atque cupiditate, iusto incidunt
+              quod magni.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Courses Section -->
+    <div class="courses-container" id="courses-container">
+      <template id="course-template">
+        <div class="course-card">
+          <h3 class="course-title"></h3>
+          <p><strong>Price:</strong> <span class="course-price"></span></p>
+          <p>
+            <strong>Duration:</strong> <span class="course-duration"></span>
+          </p>
+          <p class="short-description"></p>
+
+          <ul class="full-description" style="display: none"></ul>
+
+          <button class="see-more">See More</button>
+          <button class="see-less" style="display: none">See Less</button>
+
+          <button class="button">
+            <a href="#" class="sign-in-button">Sign In</a>
+          </button>
+        </div>
+      </template>
+    </div>
+
+    <script src="course.js"></script>
+  </body>
+</html>

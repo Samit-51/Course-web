@@ -302,7 +302,8 @@ section {
 }
 
 .achievement {
-  height: 50vh;
+  height: fit-content;
+  min-height: 50vh;
 }
 
 .achievement-cards {
@@ -351,9 +352,15 @@ section {
   height: 400px;
   display: flex;
   flex-direction: column;
-  background: #eff;
+  background: rgb(245, 247, 180);
   overflow: clip;
   border-radius: 5%;
+  transition: all .3s;
+}
+
+.course-card:hover{
+  transform: translateY(-20px);
+  box-shadow: 0 0 0 4px var(--nav-element1-dark);
 }
 
 .course-card .course-image {
