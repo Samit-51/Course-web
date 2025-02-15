@@ -1,0 +1,174 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fa;
+}
+
+/* HEADER */
+.header {
+  background: url("ngt.jpg") center/cover no-repeat;
+  text-align: center;
+  background-color: black;
+  width: 100vw;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.header h1 {
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  font-size: 28px;
+}
+
+.header p {
+  font-size: 20px;
+  color: #fff;
+}
+
+.buy-button {
+  cursor: pointer;
+  margin-top: 15px;
+  border: none;
+  outline: none;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 6px;
+  font-size: 18px;
+  transition: background 0.3s ease-in-out;
+}
+
+.buy-button:hover {
+  background-color: #0056b3;
+}
+
+/* BODY CONTENT */
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  width: 100%;
+  padding: 20px;
+}
+
+.schedule-notice {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  text-align: center;
+}
+
+.schedule-notice p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+  margin: 15px 0;
+}
+
+.schedule-notice::before {
+  content: "📅";
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* CARD CONTAINER */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  width: 350px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.content {
+  padding: 15px;
+}
+
+.content .title {
+  font-weight: bold;
+  font-size: 20px;
+  color: #333;
+}
+
+.content .price {
+  font-size: 28px;
+  font-weight: bold;
+  color: #007bff;
+  margin: 10px 0;
+}
+
+.content .description {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.card button {
+  border: none;
+  outline: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 20px;
+  background-color: #007bff;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
+
+.additional-content {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 22px;
+  }
+
+  .header p {
+    font-size: 16px;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .schedule-notice {
+    max-width: 90%;
+  }
+}

@@ -41,11 +41,12 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 1.25rem 2.5rem;
-  font-size: 1.325rem;
+  font-size: clamp(1rem, 1.25vw, 1.325rem);
 }
 
 nav h1 {
-  font-size: 2rem;
+  font-size: clamp(1.25rem, 2vw, 2rem);
+  white-space: nowrap;
 }
 
 nav h1 span {
@@ -64,9 +65,10 @@ ul {
 
 ul li a {
   position: relative;
+  white-space: nowrap;
 }
 
-nav ul li a::before {
+nav ul li .link::before {
   content: "";
   height: 0.185rem;
   width: 110%;
@@ -80,7 +82,7 @@ nav ul li a::before {
   transition: all 0.3s;
 }
 
-nav ul li a:hover:before {
+nav ul li .link:hover:before {
   transform: scaleX(1);
 }
 
@@ -172,10 +174,14 @@ nav ul li button:hover {
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
+  height: fit-content;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .home {
+  height: 100%;
   display: flex;
   align-items: center;
   gap: 1.25rem;
@@ -186,9 +192,9 @@ section {
 }
 
 .home .content {
-  padding: 0 12.5rem;
+  padding: 1.25rem clamp(40px, 7vw, 25rem);
   text-align: left;
-  flex: 1;
+  flex: 1 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -227,15 +233,17 @@ section {
 }
 
 .home .image {
+  flex: 2 0;
   height: 100%;
-  flex: 1 1 100%;
-  display: flex;
-  align-items: flex-end;
+  background: url("./image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .home .img {
   height: 70%;
-  width: 65%;
+  width: 95%;
   border-radius: 7rem 15rem 0 0;
   background: url("./image.jpg");
   background-repeat: no-repeat;
@@ -245,8 +253,11 @@ section {
 
 .features,
 .achievement {
+  min-height: 100vh;
+  height: fit-content;
   display: flex;
   flex-direction: column;
+  gap: 2rem;
   align-items: center;
   justify-content: center;
 }
@@ -257,23 +268,26 @@ section {
 
 .feature-cards {
   display: flex;
+  flex-wrap: wrap;
   gap: 3.125rem;
   align-items: center;
   justify-content: center;
-  height: 600px;
+  min-height: 600px;
+  height: fit-content;
   width: 90%;
 }
 
 .feature-card {
+  flex: 1 0 300px;
   border-radius: 1.25rem;
   height: 70%;
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 3.125rem;
   transition: all 0.3s;
+  padding: clamp(1rem, 10vw ,3rem);
   background: #dfd;
 }
 
@@ -342,19 +356,20 @@ section {
   width: 100%;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1.25rem;
-  padding: 0 10rem;
+  padding: 2rem clamp(4rem, 10vw, 10rem);
 }
 
 .course-card {
   position: relative;
-  flex: 1 1 300px;
+  flex: 0 1 420px;
   height: 400px;
   display: flex;
   flex-direction: column;
   background: rgb(245, 247, 180);
   overflow: clip;
-  border-radius: 5%;
+  border-radius: clamp(2rem, 2vw ,5rem);
   transition: all .3s;
 }
 
@@ -375,7 +390,7 @@ section {
 .course-detials,
 .more-info {
   height: 10%;
-  padding: 0 0.625rem;
+  padding: 2rem;
 }
 
 .course-title {
@@ -438,12 +453,16 @@ section {
   height: 50px;
 }
 
-@media only screen and (max-width: 870px) {
-  nav ul li a {
+@media only screen and (max-width: 980px) {
+  nav ul li .link {
     display: none;
   }
 
   .ham-burger {
     display: block;
+  }
+
+  .home .image{
+    display: none;
   }
 }
