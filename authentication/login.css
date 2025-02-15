@@ -1,8 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap");
+
+:root {
+  --nav-element1: rgb(94, 227, 136);
+  --nav-element1-dark: rgb(77, 188, 112);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "Funnel Display";
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 420px;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+}
+
+nav {
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 2.5rem;
+  font-size: 1.325rem;
+}
+
+nav h1 {
+  font-size: 2rem;
+}
+
+nav h1 span {
+  color: var(--nav-element1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+ul li a {
+  position: relative;
+}
+
+nav ul li a::before {
+  content: "";
+  height: 0.185rem;
+  width: 110%;
+  transform: scaleX(0);
+  translate: -50%;
+  position: absolute;
+  bottom: -0.3125rem;
+  left: 50%;
+  background: var(--nav-element1);
+  transform-origin: left;
+  transition: all 0.3s;
+}
+
+nav ul li a:hover:before {
+  transform: scaleX(1);
+}
+
+nav ul li button {
+  box-sizing: unset;
+  padding: 0.625rem 2.2rem;
+  border-radius: 0.625rem;
+  background: var(--nav-element1);
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+nav ul li button:hover {
+  scale: 1.1;
+  background: var(--nav-element1-dark);
 }
 
 /* Banner Section */
@@ -50,37 +140,6 @@
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   transition: 0.3s ease;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .banner {
-    height: 220px;
-    padding: 15px;
-  }
-
-  .text {
-    font-size: 28px;
-  }
-
-  .logo-img {
-    width: 220px;
-  }
-}
-
-@media (max-width: 480px) {
-  .banner {
-    height: 180px;
-    padding: 10px;
-  }
-
-  .text {
-    font-size: 22px;
-  }
-
-  .logo-img {
-    width: 180px;
-  }
 }
 
 /* Login Form */
@@ -191,6 +250,30 @@ h1 {
 .google {
   background: #3b5998;
   color: white;
+}
+.extra-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  background: #ddd;
+  height: 100vh;
+}
+
+.extra-section .links {
+  font-size: 1.2rem;
+  columns: 2;
+  column-gap: 70px;
+}
+
+.contact-links {
+  display: flex;
+  gap: 30px;
+}
+
+.contact-links svg {
+  height: 50px;
 }
 
 /* Responsive Design */

@@ -1,12 +1,78 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap");
+
+:root {
+  --nav-element1: rgb(94, 227, 136);
+  --nav-element1-dark: rgb(77, 188, 112);
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f7fa;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Funnel Display", sans-serif;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+nav {
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+}
+
+nav h1 {
+  font-size: 1.8rem;
+}
+
+nav h1 span {
+  color: var(--nav-element1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+ul li a {
+  position: relative;
+}
+
+nav ul li a::before {
+  content: "";
+  height: 3px;
+  width: 100%;
+  transform: scaleX(0);
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  background: var(--nav-element1);
+  transform-origin: left;
+  transition: all 0.3s ease;
+  translate: -50%;
+}
+
+nav ul li a:hover::before {
+  transform: scaleX(1);
 }
 
 /* HEADER */
@@ -153,6 +219,32 @@ body {
 
 .additional-content {
   display: none;
+}
+
+/* footer  */
+.extra-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  background: #ddd;
+  height: 100vh;
+}
+
+.extra-section .links {
+  font-size: 1.2rem;
+  columns: 2;
+  column-gap: 70px;
+}
+
+.contact-links {
+  display: flex;
+  gap: 30px;
+}
+
+.contact-links svg {
+  height: 50px;
 }
 
 @media (max-width: 768px) {
