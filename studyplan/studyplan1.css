@@ -12,6 +12,10 @@
   font-family: "Funnel Display", sans-serif;
 }
 
+html,body{
+  height: 100%;
+}
+
 button {
   border: none;
   background: none;
