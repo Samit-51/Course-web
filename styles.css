@@ -259,8 +259,8 @@ section > h1, .extra-section .logo h1{
   justify-content: center;
 }
 
-.features h1 {
-  font-size: 3.75rem;
+.features  > h1, .achievement  > h1, .best-courses > h1{
+  font-size: clamp(0.625rem, 10vw,3.75rem);
 }
 
 .feature-cards {
@@ -437,6 +437,9 @@ section > h1, .extra-section .logo h1{
   background: #ddd;
 }
 
+.extra-section .logo h1{
+  font-size: clamp(0.625rem, 10vw, 3.75rem);
+}
 
 .extra-section .links {
   font-size: 1.2rem;

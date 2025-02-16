@@ -1,406 +1,429 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Course List</title>
-    <link rel="stylesheet" href="course.css" />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div class="logo">
-          <h1>Logo <span>Pending</span></h1>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Course List</title>
+  <link rel="stylesheet" href="course.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <h1>Logo <span>Pending</span></h1>
+      </div>
+      <ul>
+        <li><a href="../index.html" class="link">Home</a></li>
+        <li><a href="../course/index.html" class="link">Courses</a></li>
+        <li><a href="../package/index.html" class="link">Packages</a></li>
+        <li><a href="../course-schedule/index.html" class="link">Course Schedule</a></li>
+        <li><a href="../studyplan/index.html" class="link">Study plan</a></li>
+        <li><a href="../contact/index.html" class="link">Contact us</a></li>
+        <li>
+          <button><a href="./authentication/login.html"> Login </a></button>
+        </li>
+        <li class="ham-burger"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+            width="24px" fill="#000">
+            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+          </svg></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="ham-burger-menu">
+    <ul>
+      <li class="close-btn"><button onclick=hideHamBurger()><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+            viewBox="0 -960 960 960" width="24px" fill="#000">
+            <path
+              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+          </svg></button></li>
+      <li><a href="../index.html" style="--i: 1">Home</a></li>
+      <li><a href="../course/index.html" style="--i: 2">Courses</a></li>
+      <li><a href="../package/index.html" style="--i: 3">Packages</a></li>
+      <li><a href="../course-schedule/index.html" style="--i: 4">Courses Schedule</a></li>
+      <li><a href="../studyplan/index.html" style="--i: 5">Study plan</a></li>
+      <li><a href="../contact/index.html" style="--i: 6">Contact us</a></li>
+    </ul>
+  </div>
+  <section id="home" class="hero">
+    <div class="container">
+      <h1>Master Nursing Fundamentals</h1>
+      <p>Learn essential nursing skills with expert guidance.</p>
+      <a href="#overview" class="sign-in-button">Learn More</a>
+      <a href="#offer" class="sign-in-button">Enroll Now</a>
+    </div>
+  </section>
+
+  <section id="overview" class="content">
+    <div class="container">
+      <h2>Course Overview</h2>
+      <p>
+        This course is designed to help you master the fundamentals of nursing
+        with expert guidance. Whether you're a beginner or looking to refresh
+        your skills, this course has something for everyone.
+      </p>
+      <div class="overview-details">
+        <div class="overview-text">
+          <h3>Why Choose This Course?</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat.
+          </p>
         </div>
+        <div class="overview-image">
+          <img src="./image.webp" alt="Nursing Course Image" />
+        </div>
+      </div>
+      <div class="key-points">
+        <h3>Key Highlights</h3>
         <ul>
-          <li><a href="../index.html" class="link">Home</a></li>
-          <li><a href="../course/index.html" class="link">Courses</a></li>
-          <li><a href="../package/index.html" class="link">Packages</a></li>
-          <li><a href="../course-schedule/index.html" class="link">Course Schedule</a></li>
-          <li><a href="../studyplan/index.html" class="link">Study plan</a></li>
-          <li><a href="../contact/index.html" class="link">Contact us</a></li>
-          <li>
-            <a href="../authentication/login.html"><button>Login</button></a>
-          </li>
-          <li class="ham-burger"><i class="fa-solid fa-bars"></i></li>
+          <li>Comprehensive curriculum covering all nursing fundamentals.</li>
+          <li>Hands-on practice with real-world scenarios.</li>
+          <li>Access to expert instructors and mentors.</li>
+          <li>Flexible learning schedule to suit your needs.</li>
         </ul>
-      </nav>
-    </header>
-
-    <section id="home" class="hero">
-      <div class="container">
-        <h1>Master Nursing Fundamentals</h1>
-        <p>Learn essential nursing skills with expert guidance.</p>
-        <a href="#overview" class="sign-in-button">Learn More</a>
-        <a href="#offer" class="sign-in-button">Enroll Now</a>
-      </div>
-    </section>
-
-    <section id="overview" class="content">
-      <div class="container">
-        <h2>Course Overview</h2>
-        <p>
-          This course is designed to help you master the fundamentals of nursing
-          with expert guidance. Whether you're a beginner or looking to refresh
-          your skills, this course has something for everyone.
-        </p>
-        <div class="overview-details">
-          <div class="overview-text">
-            <h3>Why Choose This Course?</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-          </div>
-          <div class="overview-image">
-            <img src="./image.webp" alt="Nursing Course Image" />
-          </div>
-        </div>
-        <div class="key-points">
-          <h3>Key Highlights</h3>
-          <ul>
-            <li>Comprehensive curriculum covering all nursing fundamentals.</li>
-            <li>Hands-on practice with real-world scenarios.</li>
-            <li>Access to expert instructors and mentors.</li>
-            <li>Flexible learning schedule to suit your needs.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="offer" class="content">
-      <div class="offer-container">
-        <h2>What We Offer</h2>
-        <div class="offer-list">
-          <div class="offer-item">
-            <h3>3-Month Access</h3>
-            <p>Flexible learning at your own pace.</p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
-              nulla minus deserunt, optio aperiam corporis aut nesciunt
-              doloremque magni voluptatem molestias? Sed eveniet id autem fuga!
-              Aperiam laboriosam quasi fugiat.
-            </p>
-          </div>
-          <div class="offer-item">
-            <h3>PMHNP Q-bank</h3>
-            <p>Comprehensive question bank to test your knowledge.</p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-              sint eius laudantium eum hic voluptas repellat architecto
-              doloribus rerum velit. Fuga voluptatibus quasi voluptate
-              temporibus, porro quibusdam obcaecati deserunt ut.
-            </p>
-          </div>
-          <div class="offer-item">
-            <h3>Expert Instructors</h3>
-            <p>Learn from experienced professionals in the field.</p>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde et
-              eligendi enim ab, iusto sequi accusamus? Ea eos tempora est
-              asperiores ut blanditiis tempore atque cupiditate, iusto incidunt
-              quod magni.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="courses-container">
-      <div class="course-card">
-        <h3 class="course-title">
-          Modules 1 and 2: Scientific Foundation and Advanced Practice Skills
-        </h3>
-        <p><strong>Price:</strong> <span class="course-price">$109.99</span></p>
-        <p>
-          <strong>Duration:</strong>
-          <span class="course-duration">5.5-hours class</span>
-        </p>
-        <p class="short-description">
-          Test taking strategies, Advanced pathophysiology...
-        </p>
-        <ul class="full-description" style="display: none">
-          <li>Test taking strategies</li>
-          <li>Advanced pathophysiology</li>
-          <li>Advanced pharmacology</li>
-          <li>Pharmacokinetics</li>
-          <li>Pharmacodynamics</li>
-          <li>Extrapyramidal side effects</li>
-          <li>Neuroleptic malignant syndrome</li>
-          <li>Dopamine pathways</li>
-          <li>Neuroanatomy</li>
-          <li>Neurodevelopment</li>
-          <li>Neurocognitive</li>
-          <li>Health promotion and disease prevention</li>
-          <li>Mental health screening tools</li>
-          <li>Mental status exam</li>
-          <li>Use of healthcare data to change, motivational interviewing</li>
-        </ul>
-        <button class="see-more">See More</button>
-        <button class="see-less" style="display: none">See Less</button>
-        <button class="button">
-          <a
-            href="https://app.acuityscheduling.com/schedule/9d3caaf4/?appointmentTypeIds[]=17573641"
-            class="sign-in-button"
-            >Sign In</a
-          >
-        </button>
-      </div>
-      <div class="course-card">
-        <h3 class="course-title">
-          Modules 1 and 2: Scientific Foundation and Advanced Practice Skills
-        </h3>
-        <p><strong>Price:</strong> <span class="course-price">$109.99</span></p>
-        <p>
-          <strong>Duration:</strong>
-          <span class="course-duration">5.5-hours class</span>
-        </p>
-        <p class="short-description">
-          Test taking strategies, Advanced pathophysiology...
-        </p>
-        <ul class="full-description" style="display: none">
-          <li>Test taking strategies</li>
-          <li>Advanced pathophysiology</li>
-          <li>Advanced pharmacology</li>
-          <li>Pharmacokinetics</li>
-          <li>Pharmacodynamics</li>
-          <li>Extrapyramidal side effects</li>
-          <li>Neuroleptic malignant syndrome</li>
-          <li>Dopamine pathways</li>
-          <li>Neuroanatomy</li>
-          <li>Neurodevelopment</li>
-          <li>Neurocognitive</li>
-          <li>Health promotion and disease prevention</li>
-          <li>Mental health screening tools</li>
-          <li>Mental status exam</li>
-          <li>Use of healthcare data to change, motivational interviewing</li>
-        </ul>
-        <button class="see-more">See More</button>
-        <button class="see-less" style="display: none">See Less</button>
-        <button class="button">
-          <a
-            href="https://app.acuityscheduling.com/schedule/9d3caaf4/?appointmentTypeIds[]=17573641"
-            class="sign-in-button"
-            >Sign In</a
-          >
-        </button>
-      </div>
-      <div class="course-card">
-        <h3 class="course-title">
-          Modules 1 and 2: Scientific Foundation and Advanced Practice Skills
-        </h3>
-        <p><strong>Price:</strong> <span class="course-price">$109.99</span></p>
-        <p>
-          <strong>Duration:</strong>
-          <span class="course-duration">5.5-hours class</span>
-        </p>
-        <p class="short-description">
-          Test taking strategies, Advanced pathophysiology...
-        </p>
-        <ul class="full-description" style="display: none">
-          <li>Test taking strategies</li>
-          <li>Advanced pathophysiology</li>
-          <li>Advanced pharmacology</li>
-          <li>Pharmacokinetics</li>
-          <li>Pharmacodynamics</li>
-          <li>Extrapyramidal side effects</li>
-          <li>Neuroleptic malignant syndrome</li>
-          <li>Dopamine pathways</li>
-          <li>Neuroanatomy</li>
-          <li>Neurodevelopment</li>
-          <li>Neurocognitive</li>
-          <li>Health promotion and disease prevention</li>
-          <li>Mental health screening tools</li>
-          <li>Mental status exam</li>
-          <li>Use of healthcare data to change, motivational interviewing</li>
-        </ul>
-        <button class="see-more">See More</button>
-        <button class="see-less" style="display: none">See Less</button>
-        <button class="button">
-          <a
-            href="https://app.acuityscheduling.com/schedule/9d3caaf4/?appointmentTypeIds[]=17573641"
-            class="sign-in-button"
-            >Sign In</a
-          >
-        </button>
-      </div>
-      <div class="course-card">
-        <h3 class="course-title">
-          Modules 1 and 2: Scientific Foundation and Advanced Practice Skills
-        </h3>
-        <p><strong>Price:</strong> <span class="course-price">$109.99</span></p>
-        <p>
-          <strong>Duration:</strong>
-          <span class="course-duration">5.5-hours class</span>
-        </p>
-        <p class="short-description">
-          Test taking strategies, Advanced pathophysiology...
-        </p>
-        <ul class="full-description" style="display: none">
-          <li>Test taking strategies</li>
-          <li>Advanced pathophysiology</li>
-          <li>Advanced pharmacology</li>
-          <li>Pharmacokinetics</li>
-          <li>Pharmacodynamics</li>
-          <li>Extrapyramidal side effects</li>
-          <li>Neuroleptic malignant syndrome</li>
-          <li>Dopamine pathways</li>
-          <li>Neuroanatomy</li>
-          <li>Neurodevelopment</li>
-          <li>Neurocognitive</li>
-          <li>Health promotion and disease prevention</li>
-          <li>Mental health screening tools</li>
-          <li>Mental status exam</li>
-          <li>Use of healthcare data to change, motivational interviewing</li>
-        </ul>
-        <button class="see-more">See More</button>
-        <button class="see-less" style="display: none">See Less</button>
-        <button class="button">
-          <a
-            href="https://app.acuityscheduling.com/schedule/9d3caaf4/?appointmentTypeIds[]=17573641"
-            class="sign-in-button"
-            >Sign In</a
-          >
-        </button>
-      </div>
-      <div class="course-card">
-        <h3 class="course-title">
-          Modules 1 and 2: Scientific Foundation and Advanced Practice Skills
-        </h3>
-        <p><strong>Price:</strong> <span class="course-price">$109.99</span></p>
-        <p>
-          <strong>Duration:</strong>
-          <span class="course-duration">5.5-hours class</span>
-        </p>
-        <p class="short-description">
-          Test taking strategies, Advanced pathophysiology...
-        </p>
-        <ul class="full-description" style="display: none">
-          <li>Test taking strategies</li>
-          <li>Advanced pathophysiology</li>
-          <li>Advanced pharmacology</li>
-          <li>Pharmacokinetics</li>
-          <li>Pharmacodynamics</li>
-          <li>Extrapyramidal side effects</li>
-          <li>Neuroleptic malignant syndrome</li>
-          <li>Dopamine pathways</li>
-          <li>Neuroanatomy</li>
-          <li>Neurodevelopment</li>
-          <li>Neurocognitive</li>
-          <li>Health promotion and disease prevention</li>
-          <li>Mental health screening tools</li>
-          <li>Mental status exam</li>
-          <li>Use of healthcare data to change, motivational interviewing</li>
-        </ul>
-        <button class="see-more">See More</button>
-        <button class="see-less" style="display: none">See Less</button>
-        <button class="button">
-          <a
-            href="https://app.acuityscheduling.com/schedule/9d3caaf4/?appointmentTypeIds[]=17573641"
-            class="sign-in-button"
-            >Sign In</a
-          >
-        </button>
-      </div>
-      <div class="course-card">
-        <h3 class="course-title">
-          Modules 1 and 2: Scientific Foundation and Advanced Practice Skills
-        </h3>
-        <p><strong>Price:</strong> <span class="course-price">$109.99</span></p>
-        <p>
-          <strong>Duration:</strong>
-          <span class="course-duration">5.5-hours class</span>
-        </p>
-        <p class="short-description">
-          Test taking strategies, Advanced pathophysiology...
-        </p>
-        <ul class="full-description" style="display: none">
-          <li>Test taking strategies</li>
-          <li>Advanced pathophysiology</li>
-          <li>Advanced pharmacology</li>
-          <li>Pharmacokinetics</li>
-          <li>Pharmacodynamics</li>
-          <li>Extrapyramidal side effects</li>
-          <li>Neuroleptic malignant syndrome</li>
-          <li>Dopamine pathways</li>
-          <li>Neuroanatomy</li>
-          <li>Neurodevelopment</li>
-          <li>Neurocognitive</li>
-          <li>Health promotion and disease prevention</li>
-          <li>Mental health screening tools</li>
-          <li>Mental status exam</li>
-          <li>Use of healthcare data to change, motivational interviewing</li>
-        </ul>
-        <button class="see-more">See More</button>
-        <button class="see-less" style="display: none">See Less</button>
-        <button class="button">
-          <a
-            href="https://app.acuityscheduling.com/schedule/9d3caaf4/?appointmentTypeIds[]=17573641"
-            class="sign-in-button"
-            >Sign In</a
-          >
-        </button>
       </div>
     </div>
+  </section>
 
-    <section class="extra-section">
-      <div class="logo" style="font-size: 64px">Logo pending.</div>
-      <div class="links">
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../course/index.html">Courses</a></li>
-          <li><a href="../course-schedule/index.html">Course Schedule</a></li>
-          <li><a href="../studyplan/index.html">Study plan</a></li>
-          <li><a href="../contact/index.html">Contact us</a></li>
-        </ul>
+  <section id="offer" class="content">
+    <div class="offer-container">
+      <h2>What We Offer</h2>
+      <div class="offer-list">
+        <div class="offer-item">
+          <h3>3-Month Access</h3>
+          <p>Flexible learning at your own pace.</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
+            nulla minus deserunt, optio aperiam corporis aut nesciunt
+            doloremque magni voluptatem molestias? Sed eveniet id autem fuga!
+            Aperiam laboriosam quasi fugiat.
+          </p>
+        </div>
+        <div class="offer-item">
+          <h3>PMHNP Q-bank</h3>
+          <p>Comprehensive question bank to test your knowledge.</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+            sint eius laudantium eum hic voluptas repellat architecto
+            doloribus rerum velit. Fuga voluptatibus quasi voluptate
+            temporibus, porro quibusdam obcaecati deserunt ut.
+          </p>
+        </div>
+        <div class="offer-item">
+          <h3>Expert Instructors</h3>
+          <p>Learn from experienced professionals in the field.</p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde et
+            eligendi enim ab, iusto sequi accusamus? Ea eos tempora est
+            asperiores ut blanditiis tempore atque cupiditate, iusto incidunt
+            quod magni.
+          </p>
+        </div>
       </div>
-      <div class="contact-links">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-          <path
-            d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"
-          />
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-          <path
-            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-          />
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-          <path
-            d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
-          />
-        </svg>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const seeMoreButtons = document.querySelectorAll(".see-more");
-        const seeLessButtons = document.querySelectorAll(".see-less");
+  <div class="courses-container">
+    <div class="course-card">
+      <h3 class="course-title">
+        Modules 1 and 2: Scientific Foundation and Advanced Practice Skills
+      </h3>
+      <p><strong>Price:</strong> <span class="course-price">$109.99</span></p>
+      <p>
+        <strong>Duration:</strong>
+        <span class="course-duration">5.5-hours class</span>
+      </p>
+      <p class="short-description">
+        Test taking strategies, Advanced pathophysiology...
+      </p>
+      <ul class="full-description" style="display: none">
+        <li>Test taking strategies</li>
+        <li>Advanced pathophysiology</li>
+        <li>Advanced pharmacology</li>
+        <li>Pharmacokinetics</li>
+        <li>Pharmacodynamics</li>
+        <li>Extrapyramidal side effects</li>
+        <li>Neuroleptic malignant syndrome</li>
+        <li>Dopamine pathways</li>
+        <li>Neuroanatomy</li>
+        <li>Neurodevelopment</li>
+        <li>Neurocognitive</li>
+        <li>Health promotion and disease prevention</li>
+        <li>Mental health screening tools</li>
+        <li>Mental status exam</li>
+        <li>Use of healthcare data to change, motivational interviewing</li>
+      </ul>
+      <button class="see-more">See More</button>
+      <button class="see-less" style="display: none">See Less</button>
+      <button class="button">
+        <a href="https://app.acuityscheduling.com/schedule/9d3caaf4/?appointmentTypeIds[]=17573641"
+          class="sign-in-button">Sign In</a>
+      </button>
+    </div>
+    <div class="course-card">
+      <h3 class="course-title">
+        Modules 1 and 2: Scientific Foundation and Advanced Practice Skills
+      </h3>
+      <p><strong>Price:</strong> <span class="course-price">$109.99</span></p>
+      <p>
+        <strong>Duration:</strong>
+        <span class="course-duration">5.5-hours class</span>
+      </p>
+      <p class="short-description">
+        Test taking strategies, Advanced pathophysiology...
+      </p>
+      <ul class="full-description" style="display: none">
+        <li>Test taking strategies</li>
+        <li>Advanced pathophysiology</li>
+        <li>Advanced pharmacology</li>
+        <li>Pharmacokinetics</li>
+        <li>Pharmacodynamics</li>
+        <li>Extrapyramidal side effects</li>
+        <li>Neuroleptic malignant syndrome</li>
+        <li>Dopamine pathways</li>
+        <li>Neuroanatomy</li>
+        <li>Neurodevelopment</li>
+        <li>Neurocognitive</li>
+        <li>Health promotion and disease prevention</li>
+        <li>Mental health screening tools</li>
+        <li>Mental status exam</li>
+        <li>Use of healthcare data to change, motivational interviewing</li>
+      </ul>
+      <button class="see-more">See More</button>
+      <button class="see-less" style="display: none">See Less</button>
+      <button class="button">
+        <a href="https://app.acuityscheduling.com/schedule/9d3caaf4/?appointmentTypeIds[]=17573641"
+          class="sign-in-button">Sign In</a>
+      </button>
+    </div>
+    <div class="course-card">
+      <h3 class="course-title">
+        Modules 1 and 2: Scientific Foundation and Advanced Practice Skills
+      </h3>
+      <p><strong>Price:</strong> <span class="course-price">$109.99</span></p>
+      <p>
+        <strong>Duration:</strong>
+        <span class="course-duration">5.5-hours class</span>
+      </p>
+      <p class="short-description">
+        Test taking strategies, Advanced pathophysiology...
+      </p>
+      <ul class="full-description" style="display: none">
+        <li>Test taking strategies</li>
+        <li>Advanced pathophysiology</li>
+        <li>Advanced pharmacology</li>
+        <li>Pharmacokinetics</li>
+        <li>Pharmacodynamics</li>
+        <li>Extrapyramidal side effects</li>
+        <li>Neuroleptic malignant syndrome</li>
+        <li>Dopamine pathways</li>
+        <li>Neuroanatomy</li>
+        <li>Neurodevelopment</li>
+        <li>Neurocognitive</li>
+        <li>Health promotion and disease prevention</li>
+        <li>Mental health screening tools</li>
+        <li>Mental status exam</li>
+        <li>Use of healthcare data to change, motivational interviewing</li>
+      </ul>
+      <button class="see-more">See More</button>
+      <button class="see-less" style="display: none">See Less</button>
+      <button class="button">
+        <a href="https://app.acuityscheduling.com/schedule/9d3caaf4/?appointmentTypeIds[]=17573641"
+          class="sign-in-button">Sign In</a>
+      </button>
+    </div>
+    <div class="course-card">
+      <h3 class="course-title">
+        Modules 1 and 2: Scientific Foundation and Advanced Practice Skills
+      </h3>
+      <p><strong>Price:</strong> <span class="course-price">$109.99</span></p>
+      <p>
+        <strong>Duration:</strong>
+        <span class="course-duration">5.5-hours class</span>
+      </p>
+      <p class="short-description">
+        Test taking strategies, Advanced pathophysiology...
+      </p>
+      <ul class="full-description" style="display: none">
+        <li>Test taking strategies</li>
+        <li>Advanced pathophysiology</li>
+        <li>Advanced pharmacology</li>
+        <li>Pharmacokinetics</li>
+        <li>Pharmacodynamics</li>
+        <li>Extrapyramidal side effects</li>
+        <li>Neuroleptic malignant syndrome</li>
+        <li>Dopamine pathways</li>
+        <li>Neuroanatomy</li>
+        <li>Neurodevelopment</li>
+        <li>Neurocognitive</li>
+        <li>Health promotion and disease prevention</li>
+        <li>Mental health screening tools</li>
+        <li>Mental status exam</li>
+        <li>Use of healthcare data to change, motivational interviewing</li>
+      </ul>
+      <button class="see-more">See More</button>
+      <button class="see-less" style="display: none">See Less</button>
+      <button class="button">
+        <a href="https://app.acuityscheduling.com/schedule/9d3caaf4/?appointmentTypeIds[]=17573641"
+          class="sign-in-button">Sign In</a>
+      </button>
+    </div>
+    <div class="course-card">
+      <h3 class="course-title">
+        Modules 1 and 2: Scientific Foundation and Advanced Practice Skills
+      </h3>
+      <p><strong>Price:</strong> <span class="course-price">$109.99</span></p>
+      <p>
+        <strong>Duration:</strong>
+        <span class="course-duration">5.5-hours class</span>
+      </p>
+      <p class="short-description">
+        Test taking strategies, Advanced pathophysiology...
+      </p>
+      <ul class="full-description" style="display: none">
+        <li>Test taking strategies</li>
+        <li>Advanced pathophysiology</li>
+        <li>Advanced pharmacology</li>
+        <li>Pharmacokinetics</li>
+        <li>Pharmacodynamics</li>
+        <li>Extrapyramidal side effects</li>
+        <li>Neuroleptic malignant syndrome</li>
+        <li>Dopamine pathways</li>
+        <li>Neuroanatomy</li>
+        <li>Neurodevelopment</li>
+        <li>Neurocognitive</li>
+        <li>Health promotion and disease prevention</li>
+        <li>Mental health screening tools</li>
+        <li>Mental status exam</li>
+        <li>Use of healthcare data to change, motivational interviewing</li>
+      </ul>
+      <button class="see-more">See More</button>
+      <button class="see-less" style="display: none">See Less</button>
+      <button class="button">
+        <a href="https://app.acuityscheduling.com/schedule/9d3caaf4/?appointmentTypeIds[]=17573641"
+          class="sign-in-button">Sign In</a>
+      </button>
+    </div>
+    <div class="course-card">
+      <h3 class="course-title">
+        Modules 1 and 2: Scientific Foundation and Advanced Practice Skills
+      </h3>
+      <p><strong>Price:</strong> <span class="course-price">$109.99</span></p>
+      <p>
+        <strong>Duration:</strong>
+        <span class="course-duration">5.5-hours class</span>
+      </p>
+      <p class="short-description">
+        Test taking strategies, Advanced pathophysiology...
+      </p>
+      <ul class="full-description" style="display: none">
+        <li>Test taking strategies</li>
+        <li>Advanced pathophysiology</li>
+        <li>Advanced pharmacology</li>
+        <li>Pharmacokinetics</li>
+        <li>Pharmacodynamics</li>
+        <li>Extrapyramidal side effects</li>
+        <li>Neuroleptic malignant syndrome</li>
+        <li>Dopamine pathways</li>
+        <li>Neuroanatomy</li>
+        <li>Neurodevelopment</li>
+        <li>Neurocognitive</li>
+        <li>Health promotion and disease prevention</li>
+        <li>Mental health screening tools</li>
+        <li>Mental status exam</li>
+        <li>Use of healthcare data to change, motivational interviewing</li>
+      </ul>
+      <button class="see-more">See More</button>
+      <button class="see-less" style="display: none">See Less</button>
+      <button class="button">
+        <a href="https://app.acuityscheduling.com/schedule/9d3caaf4/?appointmentTypeIds[]=17573641"
+          class="sign-in-button">Sign In</a>
+      </button>
+    </div>
+  </div>
 
-        seeMoreButtons.forEach((button) => {
-          button.addEventListener("click", function () {
-            const fullDescription = this.previousElementSibling;
-            const seeLessBtn = this.nextElementSibling;
-            fullDescription.style.display = "block";
-            this.style.display = "none";
-            seeLessBtn.style.display = "inline-block";
-          });
-        });
+  <section class="extra-section">
+    <div class="logo" style="font-size: 64px">Logo pending.</div>
+    <div class="links">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../course/index.html">Courses</a></li>
+        <li><a href="../course-schedule/index.html">Course Schedule</a></li>
+        <li><a href="../studyplan/index.html">Study plan</a></li>
+        <li><a href="../contact/index.html">Contact us</a></li>
+      </ul>
+    </div>
+    <div class="contact-links">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path
+          d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <path
+          d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <path
+          d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+      </svg>
+    </div>
+  </section>
 
-        seeLessButtons.forEach((button) => {
-          button.addEventListener("click", function () {
-            const fullDescription =
-              this.previousElementSibling.previousElementSibling;
-            const seeMoreBtn = this.previousElementSibling;
-            fullDescription.style.display = "none";
-            this.style.display = "none";
-            seeMoreBtn.style.display = "inline-block";
-          });
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const seeMoreButtons = document.querySelectorAll(".see-more");
+      const seeLessButtons = document.querySelectorAll(".see-less");
+
+      seeMoreButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          const fullDescription = this.previousElementSibling;
+          const seeLessBtn = this.nextElementSibling;
+          fullDescription.style.display = "block";
+          this.style.display = "none";
+          seeLessBtn.style.display = "inline-block";
         });
       });
-    </script>
-  </body>
+
+      seeLessButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          const fullDescription =
+            this.previousElementSibling.previousElementSibling;
+          const seeMoreBtn = this.previousElementSibling;
+          fullDescription.style.display = "none";
+          this.style.display = "none";
+          seeMoreBtn.style.display = "inline-block";
+        });
+      });
+    });
+
+    let hamBurgerIcon = document.querySelector(".ham-burger");
+    let hamBurgerMenu = document.querySelector(".ham-burger-menu");
+    let closebtn = document.querySelector('.close-btn');
+
+    hamBurgerIcon.addEventListener("click", (e) => {
+      e.stopPropagation();
+      hamBurgerMenu.classList.toggle("active");
+    });
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 600) {
+        hamBurgerMenu.classList.remove("active");
+      }
+    });
+
+    window.addEventListener('click', (e) => {
+      if (hamBurgerMenu.classList.contains('active') && !e.target.closest('.ham-burger-menu')) {
+        hideHamBurger();
+      }
+    });
+
+    function hideHamBurger() {
+      hamBurgerMenu.classList.remove("active");
+    }
+  </script>
+</body>
+
 </html>

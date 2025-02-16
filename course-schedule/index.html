@@ -24,10 +24,25 @@
         <li>
           <button><a href="./authentication/login.html"> Login </a></button>
         </li>
-        <li class="ham-burger"><i class="fa-solid fa-bars"></i></li>
+        <li class="ham-burger"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></li>
       </ul>
     </nav>
   </header>
+  <div class="ham-burger-menu">
+    <ul>
+      <li class="close-btn"><button onclick=hideHamBurger()><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+            viewBox="0 -960 960 960" width="24px" fill="#000">
+            <path
+              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+          </svg></button></li>
+      <li><a href="../index.html" style="--i: 1">Home</a></li>
+      <li><a href="../course/index.html" style="--i: 2">Courses</a></li>
+      <li><a href="../package/index.html" style="--i: 3">Packages</a></li>
+      <li><a href="../course-schedule/index.html" style="--i: 4">Courses Schedule</a></li>
+      <li><a href="../studyplan/index.html" style="--i: 5">Study plan</a></li>
+      <li><a href="../contact/index.html" style="--i: 6">Contact us</a></li>
+    </ul>
+  </div>
   <section class="booking">
     <div class="logo">
       <h1>Logo <span>Pending</span></h1>
@@ -40,7 +55,9 @@
     <ul>
       <li>
         <details>
-          <summary>Modules 1 and 2: Scientific Foundation and Advanced Practice Skills: 5.5 hours</summary>
+          <summary>
+            <p>Modules 1 and 2: Scientific Foundation and Advanced Practice Skills: 5.5 hours</p>
+          </summary>
           <ul class="course-details">
             <li>Test taking strategies</li>
             <li>Advanced pathophysiology</li>
@@ -62,7 +79,9 @@
       </li>
       <li>
         <details>
-          <summary>Module 3: Diagnosis and Treatment: 3.5 hours</summary>
+          <summary>
+            <p>Module 3: Diagnosis and Treatment: 3.5 hours</p>
+          </summary>
           <ul class="course-details">
             <li>Master the essentials of diagnosis and treatment as a Psychiatric Mental Health Nurse Practitioner
               (PMHNP).</li>
@@ -75,7 +94,9 @@
 
       <li>
         <details>
-          <summary>Module 4: Psychotherapy and Related Theories: 3 hours</summary>
+          <summary>
+            <p>Module 4: Psychotherapy and Related Theories: 3 hours</p>
+          </summary>
           <ul class="course-details">
             <li>Scope of practice</li>
             <li>Standard of practice</li>
@@ -96,7 +117,9 @@
       </li>
       <li>
         <details>
-          <summary>Module 5: Ethical, Legal Principles, and Cultural Care: 3 hours</summary>
+          <summary>
+            <p>Module 5: Ethical, Legal Principles, and Cultural Care: 3 hours</p>
+          </summary>
           <ul class="course-details">
             <li>Accelerate your PMHNP exam preparation</li>
             <li>Designed specifically for aspiring Psychiatric Mental Health Nurse Practitioners</li>
@@ -106,7 +129,8 @@
             <li>Tailored for busy students</li>
             <li>Provides a flexible yet comprehensive approach</li>
             <li>Students can self-reschedule the Last Minute Review (LMR) class up to six times</li>
-            <li>If you plan on rescheduling last-minute reviews, plan on rescheduling the class not less than 48 hours to</li>
+            <li>If you plan on rescheduling last-minute reviews, plan on rescheduling the class not less than 48 hours
+              to</li>
             <li>the class time</li>
             <li>The modules 1-5 review classes cannot be rescheduled once scheduled</li>
           </ul>
@@ -115,7 +139,9 @@
     </ul>
   </section>
   <section class="extra-section">
-    <div class="logo" style="font-size: 64px">Logo pending.</div>
+    <div class="logo">
+      <h1>Logo pending.</h1>
+    </div>
     <div class="links">
       <ul>
         <li><a href="../index.html">Home</a></li>
@@ -140,6 +166,31 @@
       </svg>
     </div>
   </section>
+  <script>
+    let hamBurgerIcon = document.querySelector(".ham-burger");
+    let hamBurgerMenu = document.querySelector(".ham-burger-menu");
+    let closebtn = document.querySelector('.close-btn');
+
+    hamBurgerIcon.addEventListener("click", (e) => {
+      e.stopPropagation();
+      hamBurgerMenu.classList.toggle("active");
+    });
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 600) {
+        hamBurgerMenu.classList.remove("active");
+      }
+    });
+
+    window.addEventListener('click', (e) => {
+      if (hamBurgerMenu.classList.contains('active') && !e.target.closest('.ham-burger-menu')) {
+        hideHamBurger();
+      }
+    });
+
+    function hideHamBurger() {
+      hamBurgerMenu.classList.remove("active");
+    }
+  </script>
 </body>
 
 </html>

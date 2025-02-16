@@ -1,6 +1,7 @@
 let hamBurgerIcon = document.querySelector(".ham-burger");
 let hamBurgerMenu = document.querySelector(".ham-burger-menu");
 let closebtn = document.querySelector('.close-btn');
+
 hamBurgerIcon.addEventListener("click", (e) => {
     e.stopPropagation();
     hamBurgerMenu.classList.toggle("active");
