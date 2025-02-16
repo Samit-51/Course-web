@@ -1,153 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact</title>
-    <link rel="stylesheet" href="contact.css" />
-    <script
-      src="https://kit.fontawesome.com/your-kit-code.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact</title>
+  <link rel="stylesheet" href="contact.css" />
+  <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+</head>
 
-    <header>
-      <nav>
-        <div class="logo">
-          <h1>Logo <span>Pending</span></h1>
-        </div>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../course/index.html">Courses</a></li>
-          <li><a href="#">Course Schedule</a></li>
-          <li><a href="../studyplan/index.html">Study plan</a></li>
-          <li><a href="../contact/index.html">Contact us</a></li>
-          <li>
-            <a href="../authentication/login.html"><button>Login</button></a>
-          </li>
-          <li class="ham-burger"><i class="fa-solid fa-bars"></i></li>
-        </ul>
-      </nav>
-    </header>
-
-
-    <div class="banner">
-      <div class="banner-content">
-        <img class="logo-img" src="../images/logo.png" alt="Logo" />
-        <h1>GEORGETTE'S PMHNP CERTIFICATE REVIEW COURSE</h1>
-        <!-- Home Button -->
-        <a href="../index.html" class="home-btn">Home</a>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <h1>Logo <span>Pending</span></h1>
+      </div>
+      <ul>
+        <li><a href="../index.html" class="link">Home</a></li>
+        <li><a href="../course/index.html" class="link">Courses</a></li>
+        <li><a href="../package/index.html" class="link">Packages</a></li>
+        <li><a href="../course-schedule/index.html" class="link">Course Schedule</a></li>
+        <li><a href="../studyplan/index.html" class="link">Study plan</a></li>
+        <li><a href="../contact/index.html" class="link">Contact us</a></li>
+        <li>
+          <button><a href="./authentication/login.html"> Login </a></button>
+        </li>
+        <li class="ham-burger"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+            width="24px" fill="#000">
+            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+          </svg></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="ham-burger-menu">
+    <ul>
+      <li class="close-btn"><button onclick=hideHamBurger()><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+            viewBox="0 -960 960 960" width="24px" fill="#000">
+            <path
+              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+          </svg></button></li>
+      <li><a href="../index.html" style="--i: 1">Home</a></li>
+      <li><a href="../course/index.html" style="--i: 2">Courses</a></li>
+      <li><a href="../package/index.html" style="--i: 3">Packages</a></li>
+      <li><a href="../course-schedule/index.html" style="--i: 4">Courses Schedule</a></li>
+      <li><a href="../studyplan/index.html" style="--i: 5">Study plan</a></li>
+      <li><a href="../contact/index.html" style="--i: 6">Contact us</a></li>
+    </ul>
+  </div>
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="form-container">
+      <h1>Reach us</h1>
+      <form>
+        <input style="grid-area: Name;" type="text" placeholder="Name">
+        <input style="grid-area: E-mail;" type="email" placeholder="E-mail">
+        <input style="grid-area: Ph;" type="tel" placeholder="Contact no">
+        <input style="grid-area: Subject;" type="text" placeholder="Subject">
+        <textarea style="grid-area: ta;" rows="4" cols="40" placeholder="Enter your message."></textarea>
+      </form>
+      <button>Send Message</button>
+    </div>
+    <div class="info">
+      <div class="emailAddress">
+        <h1><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e8eaed"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg></span> Email address.</h1>
+        <p>example1@gmail.com</p>
+        <p>example2@gmail.com</p>
+      </div>
+      <div class="phone">
+        <h1>For any querry <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e8eaed"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/></svg></span></h1><br>
+        <p>+66-787878</p>
+        <p>+66-797979</p>
       </div>
     </div>
+  </section>
+  <!-- Google Map Section -->
+  <section class="map-section">
+    <h2 class="map-title">Our Location</h2>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d144.95373531531612!3d-37.816279742021665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d8a32f7f8c8e!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2us!4v1631234567890!5m2!1sen!2us"
+        allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </section>
+  <section class="extra-section">
+    <div class="logo" style="font-size: 64px">Logo pending.</div>
+    <div class="links">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../course/index.html">Courses</a></li>
+        <li><a href="../course-schedule/index.html">Course Schedule</a></li>
+        <li><a href="../studyplan/index.html">Study plan</a></li>
+        <li><a href="../contact/index.html">Contact us</a></li>
+      </ul>
+    </div>
+    <div class="contact-links">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path
+          d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <path
+          d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <path
+          d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+      </svg>
+    </div>
+  </section>
+  <script>
+    let hamBurgerIcon = document.querySelector(".ham-burger");
+    let hamBurgerMenu = document.querySelector(".ham-burger-menu");
+    let closebtn = document.querySelector('.close-btn');
 
-    <!-- Contact Section -->
-    <section class="contact-container">
-      <div class="contact-left">
-        <img
-          src="https://static.vecteezy.com/system/resources/thumbnails/044/570/798/small/smiling-female-customer-service-representative-with-headset-and-transparent-background-png.png"
-          alt="Support Agent"
-          class="contact-image"
-        />
-        <div class="contact-info">
-          <div class="info-box">
-            <h3>📞 For any Query?</h3>
-            <p>Melbourne<br />Victoria, Australia</p>
-          </div>
-          <div class="info-box">
-            <h3>📧 Write Email Us</h3>
-            <p>admin@example.com<br />support@example.com</p>
-          </div>
-          <div class="info-box">
-            <h3>📍 Visit Anytime</h3>
-            <p>Free +68 (025)-9875<br />Free +68 (026)-9879</p>
-          </div>
-        </div>
-      </div>
+    hamBurgerIcon.addEventListener("click", (e) => {
+      e.stopPropagation();
+      hamBurgerMenu.classList.toggle("active");
+    });
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 600) {
+        hamBurgerMenu.classList.remove("active");
+      }
+    });
 
-      <div class="contact-right">
-        <h3 class="contact-title">Send us an email</h3>
-        <h2 class="contact-subtitle">Feel Free to Write</h2>
-        <form id="contactForm">
-          <div class="form-group">
-            <input type="text" placeholder="Enter Name" required />
-            <input type="email" placeholder="Enter Email" required />
-          </div>
-          <div class="form-group">
-            <input type="text" placeholder="Enter Subject" required />
-            <input type="tel" placeholder="Enter Phone" required />
-          </div>
-          <textarea placeholder="Enter Message" required></textarea>
-          <button type="submit" class="send-btn">Send Message</button>
-        </form>
+    window.addEventListener('click', (e) => {
+      if (hamBurgerMenu.classList.contains('active') && !e.target.closest('.ham-burger-menu')) {
+        hideHamBurger();
+      }
+    });
 
-        <!-- Social Media Icons -->
-        <div class="social-icons">
-          <a
-            href="https://www.instagram.com/"
-            target="_blank"
-            class="social-link"
-          >
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a
-            href="https://www.linkedin.com/"
-            target="_blank"
-            class="social-link"
-          >
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a
-            href="https://wa.me/1234567890"
-            target="_blank"
-            class="social-link"
-          >
-            <i class="fab fa-whatsapp"></i>
-          </a>
-        </div>
-      </div>
-    </section>
+    function hideHamBurger() {
+      hamBurgerMenu.classList.remove("active");
+    }
+  </script>
+</body>
 
-    <!-- Google Map Section -->
-    <section class="map-section">
-      <h2 class="map-title">Our Location</h2>
-      <div class="map-container">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d144.95373531531612!3d-37.816279742021665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d8a32f7f8c8e!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2us!4v1631234567890!5m2!1sen!2us"
-          allowfullscreen=""
-          loading="lazy"
-        >
-        </iframe>
-      </div>
-    </section>
-
-
-    <section class="extra-section">
-      <div class="logo" style="font-size: 64px">Logo pending.</div>
-      <div class="links">
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../course/index.html">Courses</a></li>
-          <li><a href="../course-schedule/index.html">Course Schedule</a></li>
-          <li><a href="../studyplan/index.html">Study plan</a></li>
-          <li><a href="../contact/index.html">Contact us</a></li>
-        </ul>
-      </div>
-      <div class="contact-links">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-          <path
-            d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z" />
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-          <path
-            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-          <path
-            d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
-        </svg>
-      </div>
-    </section>
-  </body>
 </html>
