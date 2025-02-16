@@ -16,7 +16,7 @@ html,
 body {
   height: 100%;
   width: 100%;
-  background: rgba(160, 240, 191, 0.1);
+  scroll-behavior: smooth;
 }
 
 button {
@@ -230,21 +230,30 @@ nav ul li button:hover {
 
 /* Hero Section */
 .hero {
-  background: url("https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg") center/cover no-repeat;
-  color: white;
+  background: url('./bg.jpg') center/cover no-repeat;
+  color: #000;
   text-align: center;
   padding: 10vw 5vw;
-  height: 40vh;
+  display: grid;
+  place-items: center;
+  height: 100vh;
 }
 
 .hero h1 {
-  font-size: clamp(2em, 5vw, 2.5em);
+  font-size: clamp(2em, 5vw, 4em);
   margin: 0;
 }
 
 .hero p {
-  font-size: clamp(1em, 3vw, 1.2em);
+  font-size: clamp(1em, 3vw, 2em);
   margin: 10px 0 20px;
+  font-weight: 600;
+}
+
+.hero a{
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  margin-right: clamp(20px, 2vw ,2rem);
+  color: #222222;
 }
 
 /* Overview Section */
@@ -261,7 +270,7 @@ nav ul li button:hover {
 }
 
 #overview p {
-  font-size: clamp(1.2em, 3vw, 1.5rem);
+  font-size: clamp(0.625rem, 2vw, 1.25rem);
   color: #555;
   max-width: 80vw;
   margin: 0 auto 40px;
@@ -273,6 +282,7 @@ nav ul li button:hover {
   align-items: center;
   justify-content: center;
   gap: 40px;
+  padding: 2rem clamp(2rem, 7vw, 5rem);
 }
 
 .overview-text {
@@ -287,8 +297,7 @@ nav ul li button:hover {
   margin-bottom: 15px;
 }
 
-.overview-text p {
-  font-size: 1em;
+.overview-text  p {
   color: #555;
   line-height: 1.8;
 }
@@ -336,6 +345,12 @@ nav ul li button:hover {
 }
 
 /* Offer Section */
+.offer-container{
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(1rem, 2vw, 2rem);
+}
+
 .offer-list {
   display: flex;
   flex-wrap: wrap;
@@ -347,9 +362,17 @@ nav ul li button:hover {
   background: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   width: clamp(250px, 30vw, 30%);
-  text-align: center;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(0.625rem, 2vw, 1rem);
+  transition: all .3s;
+}
+
+.offer-item:hover{
+  transform: translateY(-20px);
 }
 
 .offer-container {
@@ -364,15 +387,20 @@ nav ul li button:hover {
   gap: 20px;
   max-width: 1000px;
   margin: 50px auto;
+  padding: clamp(0.625rem, 4vw, 2rem);
 }
 
 .course-card {
   background: white;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all .3s ease;
+  height: fit-content;
 }
 
 .course-card:hover {
@@ -408,6 +436,11 @@ nav ul li button:hover {
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
 }
 
+.course-price{
+  color: #43d921;
+  font-weight: 600;
+}
+
 .extra-section {
   display: flex;
   flex-direction: column;
@@ -438,15 +471,6 @@ nav ul li button:hover {
     width: 250px;
     height: auto;
   }
-
-  .hero {
-    padding-top: 20vh;
-  }
-
-  .content {
-    margin-top: 100px;
-    display: none;
-  }
 }
 
 @media (max-width: 768px) {
@@ -474,6 +498,9 @@ nav ul li button:hover {
 
   .overview-details {
     flex-direction: column;
+  }
+  .overview-image{
+    display: none;
   }
 }
 
