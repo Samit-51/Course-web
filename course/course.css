@@ -47,7 +47,6 @@ nav {
 
 nav h1 {
   font-size: clamp(1.5rem, 2vw, 2.25rem);
-  white-space: nowrap;
 }
 
 nav h1 span {
@@ -448,13 +447,16 @@ nav ul li button:hover {
   justify-content: center;
   gap: 60px;
   background: #ddd;
-  height: 100vh;
+}
+
+.extra-section .logo h1{
+  font-size: clamp(0.625rem, 10vw, 3.75rem);
 }
 
 .extra-section .links {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 5vw, 1.25rem);
   columns: 2;
-  column-gap: 70px;
+  column-gap: clamp(2px, 5vw ,70px);
 }
 
 .contact-links {

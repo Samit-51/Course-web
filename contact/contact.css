@@ -15,7 +15,6 @@
 html,
 body {
   height: 100%;
-  width: 100%;
   background: rgba(160, 240, 191, 0.1);
 }
 
@@ -41,13 +40,12 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.25rem clamp(1rem, 5vw, 2.5rem);
+  padding: 1.25rem clamp(1rem, 5vw, 2rem);
   font-size: clamp(1rem, 1.25vw, 1.325rem);
 }
 
 nav h1 {
-  font-size: clamp(1.5rem, 2vw, 2.25rem);
-  white-space: nowrap;
+  font-size: clamp(1.5rem, 2.1vw, 2.25rem);
 }
 
 nav h1 span {
@@ -133,11 +131,11 @@ nav ul li button:hover {
   align-items: center;
 }
 
-.close-btn {
+.close-btn{
   padding-right: 50px;
 }
 
-.ham-burger-menu button {
+.ham-burger-menu button{
   margin-left: auto;
 }
 
@@ -164,7 +162,6 @@ nav ul li button:hover {
 .ham-burger-menu.active {
   transform: translateX(0);
 }
-
 
 .contact-section{
   min-height: 100vh;
@@ -233,7 +230,6 @@ input::placeholder, textarea::placeholder{
 .info{
   color: #fff;
   flex: 1 0;
-  flex-basis: 400px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -285,13 +281,16 @@ iframe {
   justify-content: center;
   gap: 60px;
   background: #ddd;
-  height: 100vh;
+}
+
+.extra-section .logo h1{
+  font-size: clamp(0.625rem, 10vw, 3.75rem);
 }
 
 .extra-section .links {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 5vw, 1.25rem);
   columns: 2;
-  column-gap: 70px;
+  column-gap: clamp(2px, 5vw ,70px);
 }
 
 .contact-links {
@@ -322,6 +321,25 @@ iframe {
   .info-box {
     width: 80%;
   }
+
+  nav ul {
+    gap: 20px;
+  }
+
+}
+
+@media only screen and (max-width: 980px) {
+  nav ul li .link {
+    display: none;
+  }
+
+  nav ul{
+    gap: 10px;
+  }
+
+  .ham-burger {
+    display: block;
+  }
 }
 
 @media (max-width: 768px) {
@@ -351,6 +369,17 @@ iframe {
   }
 }
 
+@media only screen and (max-width: 725px) {
+  .feature-card, .achievement-card{
+    flex-basis: 100%;
+  }
+
+  nav h1{
+    white-space: wrap;
+  }
+
+}
+
 @media (max-width: 480px) {
   .contact-image {
     max-width: 280px;
@@ -363,18 +392,14 @@ iframe {
   .send-btn {
     font-size: 14px;
   }
-}
 
-@media only screen and (max-width: 1024px) {
-  nav ul li .link {
-    display: none;
-  }
-
-  nav ul {
-    gap: 10px;
-  }
-
-  .ham-burger {
-    display: block;
+  .contact-section form{
+    grid-template-areas: 
+    "Name Name"  
+    "E-mail E-mail"
+    "Subject Subject" 
+    "Ph Ph"
+    "ta ta";
   }
 }
+
