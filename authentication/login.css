@@ -1,339 +1,242 @@
-@import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap");
-
-:root {
-  --nav-element1: rgb(94, 227, 136);
-  --nav-element1-dark: rgb(77, 188, 112);
+/* General Styles */
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("../fonts/poppins/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url("../fonts/poppins/Poppins-SemiBold.ttf");
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Funnel Display";
 }
 
-html,
 body {
-  height: 100%;
-  min-width: 420px;
+  font-family: "Poppins-Regular";
+  color: #333;
+  font-size: 13px;
+  margin: 0;
 }
 
+input,
 button {
-  border: none;
-  background: none;
+  font-family: "Poppins-Regular";
+  color: #333;
+  font-size: 13px;
 }
 
-a {
-  text-decoration: none;
-  color: #000;
+h3 {
+  margin: 0;
 }
 
-header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 2;
+img {
+  max-width: 100%;
 }
 
-nav {
-  background: #eee;
+.wrapper {
+  min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.25rem 2.5rem;
-  font-size: 1.325rem;
-}
-
-nav h1 {
-  font-size: 2rem;
-}
-
-nav h1 span {
-  color: var(--nav-element1);
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-
-ul li a {
-  position: relative;
-}
-
-nav ul li a::before {
-  content: "";
-  height: 0.185rem;
-  width: 110%;
-  transform: scaleX(0);
-  translate: -50%;
-  position: absolute;
-  bottom: -0.3125rem;
-  left: 50%;
-  background: var(--nav-element1);
-  transform-origin: left;
-  transition: all 0.3s;
-}
-
-nav ul li a:hover:before {
-  transform: scaleX(1);
-}
-
-nav ul li button {
-  box-sizing: unset;
-  padding: 0.625rem 2.2rem;
-  border-radius: 0.625rem;
-  background: var(--nav-element1);
-  font-size: 1rem;
-  transition: all 0.3s;
-}
-
-nav ul li button:hover {
-  scale: 1.1;
-  background: var(--nav-element1-dark);
-}
-
-/* Banner Section */
-.banner {
-  position: relative;
-  width: 100%;
-  height: 280px;
-  background: url("./images/bg.jpg") center/cover no-repeat;
-  display: flex;
+  align-items: stretch;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  padding: 20px;
+  padding: 0 20px;
+  gap: 0;
 }
 
-.banner::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 100, 0, 0.4);
-  z-index: 1;
-}
-
-.banner-content {
-  position: relative;
-  z-index: 2;
-  padding: 20px;
-  text-align: center;
-}
-
-.text {
-  font-size: 36px;
-  margin-bottom: 10px;
-  color: white;
-}
-
-/* Logo Image */
-.logo-img {
-  width: 300px;
-  height: auto;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  transition: 0.3s ease;
-}
-
-/* Login Form */
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 20px;
-}
-
-.form-box {
-  background: white;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-  width: 100%;
-  max-width: 420px;
-  text-align: center;
-}
-
-h1 {
-  margin-bottom: 20px;
-  font-size: 26px;
-}
-
-.input-box {
-  position: relative;
-  margin: 15px 0;
-}
-
-.input-box input {
-  width: 100%;
-  padding: 12px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-.eye-icon {
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-
-.forgot-password {
-  display: block;
-  margin: 12px 0;
-  color: #007bff;
-  text-decoration: none;
-}
-
-.btn {
-  width: 100%;
-  padding: 12px;
-  background: #007bff;
-  border: none;
-  border-radius: 6px;
-  font-size: 18px;
-  color: white;
-  cursor: pointer;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-
-.separator {
-  margin: 20px 0;
-  position: relative;
-  text-align: center;
-  color: #777;
-}
-
-.separator::before,
-.separator::after {
-  content: "";
-  width: 45%;
-  height: 1px;
-  background: #ccc;
-  position: absolute;
-  top: 50%;
-}
-
-.separator::before {
-  left: 0;
-}
-
-.separator::after {
-  right: 0;
-}
-
-.social-btn {
-  width: 100%;
-  padding: 12px;
-  font-size: 16px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  margin: 5px 0;
-}
-
-.facebook {
-  background: #3b5998;
-  color: white;
-}
-
-.google {
-  background: #3b5998;
-  color: white;
-}
-.extra-section {
+.left-side,
+.right-side {
+  width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: 60px;
-  background: #ddd;
+  align-items: center;
   height: 100vh;
 }
 
-.extra-section .links {
-  font-size: 1.2rem;
-  columns: 2;
-  column-gap: 70px;
+.image-holder img {
+  max-width: 100%;
+  border-radius: 10px;
 }
 
-.contact-links {
+.quote p {
+  font-size: 24px;
+  font-family: "Poppins-SemiBold";
+  color: #333;
+  margin-top: 20px;
+  max-width: 80%;
+  margin-left: 70px;
+  text-align: center;
+}
+
+/* Right Side */
+.right-side {
+  width: 50%;
   display: flex;
-  gap: 30px;
+  align-items: center;
+  justify-content: center;
 }
 
-.contact-links svg {
+.inner {
+  padding: 30px;
+  background: #fff;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.inner {
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+
+.inner h3 {
+  text-transform: uppercase;
+  font-size: 25px;
+  font-family: "Poppins-SemiBold";
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.form-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control {
+  border: 2px solid #333;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  display: block;
+  width: 100%;
   height: 50px;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 25px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .banner {
-    height: 200px;
+.form-control::placeholder {
+  font-size: 16px;
+  color: #333;
+  font-family: "Poppins-Regular";
+}
+
+.create-account {
+  text-align: end;
+  margin-top: 20px;
+}
+
+.create-account a {
+  font-size: 20px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.create-account a:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.create-account a:active {
+  color: #0056b3;
+}
+
+.button1 {
+  border: none;
+  width: 100%;
+  height: 60px;
+  margin-top: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: #333;
+  font-size: 20px;
+  color: #fff;
+  font-family: "Poppins-Regular";
+}
+
+.or-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background-color: #333;
+  margin: 0 10px;
+}
+
+.or-divider p {
+  margin: 0 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.oAuth {
+  border: 2px solid black;
+  padding: 15px 20px;
+  margin-top: 15px;
+  font-size: 16px;
+  font-family: "Poppins-Regular", sans-serif;
+  color: #333;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.oAuth:hover {
+  background-color: #f5f5f5;
+  border-color: #999;
+}
+
+.oAuth:active {
+  background-color: #e0e0e0;
+  border-color: #666;
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    flex-direction: column;
+    gap: 40px;
   }
 
-  .logo-img {
-    width: 250px;
+  .left-side,
+  .right-side {
+    width: 100%;
   }
 
-  .form-box {
-    width: 90%;
-    padding: 30px;
-  }
-
-  h1 {
-    font-size: 22px;
-  }
-
-  .input-box input {
-    font-size: 14px;
-    padding: 10px;
-  }
-
-  .btn,
-  .social-btn {
-    font-size: 16px;
-    padding: 10px;
+  .inner {
+    max-width: 500px;
   }
 }
 
-@media (max-width: 480px) {
-  .banner {
-    height: 180px;
-    padding: 10px;
-  }
-
-  .logo-img {
-    width: 200px;
-  }
-
-  .form-box {
-    width: 95%;
+@media (max-width: 767px) {
+  .wrapper {
     padding: 20px;
   }
 
-  h1 {
+  .quote p {
     font-size: 20px;
-  }
-
-  .input-box input {
-    font-size: 14px;
-    padding: 8px;
-  }
-
-  .btn,
-  .social-btn {
-    font-size: 14px;
-    padding: 10px;
   }
 }
