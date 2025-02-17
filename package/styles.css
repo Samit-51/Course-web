@@ -12,6 +12,13 @@
   font-family: "Funnel Display", sans-serif;
 }
 
+html,
+body {
+  height: 100%;
+  background: rgba(160, 240, 191, 0.1);
+  overflow-x: clip;
+}
+
 button {
   border: none;
   background: none;
@@ -26,7 +33,7 @@ header {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 10;
+  z-index: 2;
 }
 
 nav {
@@ -34,12 +41,12 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
+  padding: 1.25rem clamp(1rem, 5vw, 2.5rem);
+  font-size: clamp(1rem, 1.25vw, 1.325rem);
 }
 
 nav h1 {
-  font-size: 1.8rem;
+  font-size: clamp(1.5rem, 2vw, 2.25rem);
 }
 
 nav h1 span {
@@ -47,32 +54,114 @@ nav h1 span {
 }
 
 nav ul {
-  list-style: none;
   display: flex;
   align-items: center;
-  gap: 25px;
+  width: fit-content;
+  gap: 30px;
+}
+
+ul {
+  list-style: none;
 }
 
 ul li a {
   position: relative;
+  white-space: nowrap;
 }
 
-nav ul li a::before {
+nav ul li .link::before {
   content: "";
-  height: 3px;
-  width: 100%;
+  height: 0.185rem;
+  width: 110%;
   transform: scaleX(0);
+  translate: -50%;
   position: absolute;
-  bottom: -5px;
+  bottom: -0.3125rem;
   left: 50%;
   background: var(--nav-element1);
   transform-origin: left;
-  transition: all 0.3s ease;
-  translate: -50%;
+  transition: all 0.3s;
 }
 
-nav ul li a:hover::before {
+nav ul li .link:hover:before {
   transform: scaleX(1);
+}
+
+nav ul li button {
+  box-sizing: unset;
+  padding: 0.625rem 2.2rem;
+  border-radius: 0.625rem;
+  background: var(--nav-element1);
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+nav ul li button:hover {
+  scale: 1.1;
+  background: var(--nav-element1-dark);
+}
+
+.ham-burger {
+  display: none;
+}
+
+.ham-burger-menu {
+  min-height: 100vh;
+  height: 100%;
+  width: 17rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transition: all 0.5s;
+  z-index: 2;
+  transform: translateX(200vw);
+  background: rgb(237, 166, 148);
+}
+
+.ham-burger-menu ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 50px 0 0 30px;
+}
+
+.ham-burger-menu ul li {
+  height: 30px;
+  display: grid;
+  align-items: center;
+}
+
+.close-btn {
+  padding-right: 50px;
+}
+
+.ham-burger-menu button {
+  margin-left: auto;
+}
+
+
+.ham-burger-menu.active a {
+  font-size: 18px;
+  opacity: 0;
+  animation: move .625s ease-in-out forwards;
+  animation-delay: calc(var(--i) * 0.1s);
+}
+
+@keyframes move {
+  from {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.ham-burger-menu.active {
+  transform: translateX(0);
 }
 
 /* HEADER */
@@ -81,7 +170,7 @@ nav ul li a:hover::before {
   text-align: center;
   background-color: black;
   width: 100vw;
-  height: 40vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -223,19 +312,23 @@ nav ul li a:hover::before {
 
 /* footer  */
 .extra-section {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 60px;
   background: #ddd;
-  height: 100vh;
+}
+
+.extra-section .logo h1{
+  font-size: clamp(0.625rem, 10vw, 3.75rem);
 }
 
 .extra-section .links {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 5vw, 1.25rem);
   columns: 2;
-  column-gap: 70px;
+  column-gap: clamp(2px, 5vw ,70px);
 }
 
 .contact-links {
@@ -262,5 +355,20 @@ nav ul li a:hover::before {
 
   .schedule-notice {
     max-width: 90%;
+  }
+}
+
+
+@media only screen and (max-width: 980px) {
+  nav ul li .link {
+    display: none;
+  }
+
+  nav ul{
+    gap: 10px;
+  }
+
+  .ham-burger {
+    display: block;
   }
 }

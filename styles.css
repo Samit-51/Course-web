@@ -15,7 +15,7 @@
 html,
 body {
   height: 100%;
-  min-width: 420px;
+  background: rgba(160, 240, 191, 0.1);
 }
 
 button {
@@ -40,12 +40,13 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.25rem 2.5rem;
-  font-size: 1.325rem;
+  padding: 1.25rem clamp(1rem, 5vw, 2rem);
+  font-size: clamp(1rem, 1.25vw, 1.325rem);
 }
 
 nav h1 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 2.1vw, 2.25rem);
+  white-space: nowrap;
 }
 
 nav h1 span {
@@ -55,6 +56,7 @@ nav h1 span {
 nav ul {
   display: flex;
   align-items: center;
+  width: fit-content;
   gap: 30px;
 }
 
@@ -64,9 +66,10 @@ ul {
 
 ul li a {
   position: relative;
+  white-space: nowrap;
 }
 
-nav ul li a::before {
+nav ul li .link::before {
   content: "";
   height: 0.185rem;
   width: 110%;
@@ -80,7 +83,7 @@ nav ul li a::before {
   transition: all 0.3s;
 }
 
-nav ul li a:hover:before {
+nav ul li .link:hover:before {
   transform: scaleX(1);
 }
 
@@ -100,22 +103,19 @@ nav ul li button:hover {
 
 .ham-burger {
   display: none;
-  position: relative;
-  z-index: 40;
 }
 
 .ham-burger-menu {
-  min-height: 100%;
+  min-height: 100vh;
   height: 100%;
-  width: 200px;
+  width: 17rem;
   position: fixed;
   top: 0;
   right: 0;
   transition: all 0.5s;
   z-index: 2;
-  transform: translateX(50vw);
+  transform: translateX(200vw);
   background: rgb(237, 166, 148);
-  border-radius: 20px 0 0 20px;
 }
 
 .ham-burger-menu ul {
@@ -132,26 +132,19 @@ nav ul li button:hover {
   align-items: center;
 }
 
-.ham-burger-menu.active a {
-  font-size: 18px;
-  animation: move 0.3s linear forwards;
-  animation-delay: calc(var(--i) * 0.1s);
+.close-btn{
+  padding-right: 50px;
 }
 
-@keyframes move {
-  from {
-    transform: translateX(100vw);
-  }
-
-  to {
-    transform: translateX(0);
-  }
+.ham-burger-menu button{
+  margin-left: auto;
 }
+
 
 .ham-burger-menu.active a {
   font-size: 18px;
   opacity: 0;
-  animation: move 0.3s ease-in-out forwards;
+  animation: move .625s ease-in-out forwards;
   animation-delay: calc(var(--i) * 0.1s);
 }
 
@@ -172,10 +165,19 @@ nav ul li button:hover {
 }
 
 section {
-  height: 100vh;
+  min-height: 100dvh;
+  height: fit-content;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+section > h1, .extra-section .logo h1{
+  font-size: clamp(3.5rem, 7vw, 4rem);
+  text-align: center;
 }
 
 .home {
+  height: 100dvh;
   display: flex;
   align-items: center;
   gap: 1.25rem;
@@ -186,9 +188,9 @@ section {
 }
 
 .home .content {
-  padding: 0 12.5rem;
+  padding: 1.25rem clamp(10px, 7vw, 25rem);
   text-align: left;
-  flex: 1;
+  flex: 1 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -196,7 +198,7 @@ section {
 }
 
 .content h1 {
-  font-size: 3.5rem;
+  font-size: clamp(1rem, 7vw , 4rem);
 }
 
 .content p {
@@ -209,6 +211,8 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  height: fit-content;
   gap: 1.875rem;
 }
 
@@ -227,15 +231,17 @@ section {
 }
 
 .home .image {
+  flex: 2 0;
   height: 100%;
-  flex: 1 1 100%;
-  display: flex;
-  align-items: flex-end;
+  background: url("./image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .home .img {
   height: 70%;
-  width: 65%;
+  width: 95%;
   border-radius: 7rem 15rem 0 0;
   background: url("./image.jpg");
   background-repeat: no-repeat;
@@ -245,36 +251,42 @@ section {
 
 .features,
 .achievement {
+  min-height: 70dvh;
+  height: fit-content;
   display: flex;
   flex-direction: column;
+  gap: 2rem;
   align-items: center;
   justify-content: center;
 }
 
-.features h1 {
-  font-size: 3.75rem;
+.features  > h1, .achievement  > h1, .best-courses > h1{
+  font-size: clamp(0.625rem, 10vw,3.75rem);
 }
 
 .feature-cards {
   display: flex;
+  flex-wrap: wrap;
   gap: 3.125rem;
   align-items: center;
   justify-content: center;
-  height: 600px;
+  min-height: 600px;
+  height: fit-content;
   width: 90%;
 }
 
 .feature-card {
+  flex: 0 0 300px;
   border-radius: 1.25rem;
   height: 70%;
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 3.125rem;
   transition: all 0.3s;
-  background: #dfd;
+  padding: clamp(1rem, 10vw ,3rem);
+  background: #bfb;
 }
 
 .feature-card .feature-icon {
@@ -303,7 +315,7 @@ section {
 
 .achievement {
   height: fit-content;
-  min-height: 50vh;
+  min-height: 50svh;
 }
 
 .achievement-cards {
@@ -313,7 +325,7 @@ section {
   justify-content: space-evenly;
   gap: 2rem;
   flex-wrap: wrap;
-  padding: 0 10rem;
+  padding: 2rem clamp(3rem, 10vw, 10rem);
 }
 
 .achievement-card {
@@ -324,7 +336,7 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #dfd;
+  background: #bfb;
   border-radius: 1rem;
   transition: all 0.3s;
 }
@@ -334,7 +346,7 @@ section {
 }
 
 .achievement-title {
-  font-size: 2rem;
+  font-size: clamp(0.625rem, 7vw, 2rem);
   margin-bottom: 1.25rem;
 }
 
@@ -342,19 +354,22 @@ section {
   width: 100%;
   display: flex;
   align-items: center;
-  gap: 1.25rem;
-  padding: 0 10rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  row-gap: 4rem;
+  padding: 2rem clamp(1rem, 7vw, 7rem);
 }
 
 .course-card {
   position: relative;
-  flex: 1 1 300px;
+  flex: 0 2 340px;
   height: 400px;
   display: flex;
   flex-direction: column;
   background: rgb(245, 247, 180);
   overflow: clip;
-  border-radius: 5%;
+  border-radius: clamp(2rem, 2vw , 3rem);
   transition: all .3s;
 }
 
@@ -375,11 +390,11 @@ section {
 .course-detials,
 .more-info {
   height: 10%;
-  padding: 0 0.625rem;
+  padding: 1.72rem;
 }
 
 .course-title {
-  font-size: 2rem;
+  font-size: clamp(0.625rem, 7vw, 2rem);
   text-align: left;
   font-weight: 700;
 }
@@ -423,10 +438,14 @@ section {
   background: #ddd;
 }
 
+.extra-section .logo h1{
+  font-size: clamp(0.625rem, 10vw, 3.75rem);
+}
+
 .extra-section .links {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 5vw, 1.25rem);
   columns: 2;
-  column-gap: 70px;
+  column-gap: clamp(2px, 5vw ,70px);
 }
 
 .contact-links {
@@ -438,12 +457,42 @@ section {
   height: 50px;
 }
 
-@media only screen and (max-width: 870px) {
-  nav ul li a {
+@media only screen and (max-width: 1080px) {
+  .home .image{
     display: none;
+  }
+
+  nav ul{
+    gap: 20px;
+  }
+
+  .course-cards .course-card{
+    flex-basis: 380px;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  nav ul li .link {
+    display: none;
+  }
+
+  nav ul{
+    gap: 10px;
   }
 
   .ham-burger {
     display: block;
   }
 }
+
+@media only screen and (max-width: 725px) {
+  .feature-card, .achievement-card{
+    flex-basis: 100%;
+  }
+
+  nav h1{
+    white-space: wrap;
+  }
+
+}
+

@@ -1,4 +1,4 @@
-/* General Styles */
+
 @font-face {
   font-family: "Poppins-Regular";
   src: url("../fonts/poppins/Poppins-Regular.ttf");
@@ -19,6 +19,7 @@ body {
   color: #333;
   font-size: 13px;
   margin: 0;
+  height: 100%;
 }
 
 input,
