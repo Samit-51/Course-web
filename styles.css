@@ -458,9 +458,6 @@ section > h1, .extra-section .logo h1{
 }
 
 @media only screen and (max-width: 1080px) {
-  .home .image{
-    display: none;
-  }
 
   nav ul{
     gap: 20px;
@@ -468,6 +465,12 @@ section > h1, .extra-section .logo h1{
 
   .course-cards .course-card{
     flex-basis: 380px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .home .image{
+    display: none;
   }
 }
 
